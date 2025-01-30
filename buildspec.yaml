@@ -6,9 +6,8 @@ phases:
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 127214177340.dkr.ecr.ap-south-1.amazonaws.com
   build:
     commands:
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 127214177340.dkr.ecr.ap-south-1.amazonaws.com
+      - docker build -t practice/aws-ecr-pipeline-try-1 .
       - docker tag practice/aws-ecr-pipeline-try-1:latest 127214177340.dkr.ecr.ap-south-1.amazonaws.com/practice/aws-ecr-pipeline-try-1:latest
   post_build:
     commands:
       - docker push 127214177340.dkr.ecr.ap-south-1.amazonaws.com/practice/aws-ecr-pipeline-try-1:latest
-      
