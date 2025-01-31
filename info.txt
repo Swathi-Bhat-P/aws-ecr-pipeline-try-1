@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=G5gt5vIo1rA&t=461s
+
+Creating pipeline in aws,
+
+Automating  whenever I push code to main branch of this repo, build and deployment in aws automatically.
+Docker build, tag and pushing is also automaized in build.
+
+Create AWS Code Pipeline,
+    Link to Code commit to github repo
+    Use AWS CodeBuilder
+    Need appropriate policy for IAM the one via which pipeline has been getting generated.
+
+Need EKSCTL installation.
+Also created cluser.yaml file, to create EKS cluster.
